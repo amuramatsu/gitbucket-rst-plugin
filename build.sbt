@@ -1,6 +1,6 @@
 val Organization = "com.github.amuramatsu"
 // Don't forget to also update src/main/scala/Plugin.scala
-val Version = "0.0.1"
+val Version = "0.1.0"
 
 val GitBucketVersion = "4.0"
 val GitBucketAssemblyVersion = s"${GitBucketVersion}.0"
