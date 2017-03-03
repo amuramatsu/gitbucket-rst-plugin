@@ -66,6 +66,11 @@ text renderer.
 ChangeLog
 ---------
 
+gitbucket-rst-plugin 0.2.0 - 2017-03-03
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- compatibility with gitbucket 4.10, scala 2.12 #2
+
 gitbucket-rst-plugin 0.1.0 - 2016-10-02
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
