@@ -6,8 +6,8 @@ gitbucket-rst-plugin
     :alt: Build Status
     :target: https://travis-ci.org/amuramatsu/gitbucket-rst-plugin
 
-:plugin-version:0.1.0
-:gitbucket-bincompat-version:4.0
+:plugin-version:0.2.0
+:gitbucket-bincompat-version:4.10
 
 A `Git Bucket <https://github.com/gitbucket/gitbucket>`_ plug-in that
 provides ReSTructured text rendering capabilities. All ``.rst`` files
@@ -28,14 +28,14 @@ Build from source
     sbt clean package
 
 The built package is located at
-``target/scala-2.11/gitbucket-{gitbucket-bincompat-version}-rst-plugin-{plugin-version}.jar``.
+``target/scala-2.12/gitbucket-{gitbucket-bincompat-version}-rst-plugin-{plugin-version}.jar``.
 
 .. code-block:: none
 
     sbt assembly
 
 This makes the assembly package
-``target/scala-2.11/gitbucket-{gitbucket-bincompat-version}-rst-plugin-assembly-{plugin-version}.jar``
+``target/scala-2.12/gitbucket-{gitbucket-bincompat-version}-rst-plugin-assembly-{plugin-version}.jar``
 for deployment.
 
 Installation
