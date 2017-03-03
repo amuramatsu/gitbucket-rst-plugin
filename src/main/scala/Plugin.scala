@@ -15,7 +15,7 @@ class Plugin extends gitbucket.core.plugin.Plugin {
   override val pluginId: String = "rst"
   override val pluginName: String = "ReSTructured text Plugin"
   override val description: String = "Provides ReSTructured text rendering for GitBucket."
-  override val versions: List[Version] = List(new Version("0.2.0"))
+  override val versions: List[Version] = List(new Version("0.2.0.99"))
 
   private[this] var renderer: Option[RstRenderer] = None
 

@@ -6,8 +6,10 @@ gitbucket-rst-plugin
     :alt: Build Status
     :target: https://travis-ci.org/amuramatsu/gitbucket-rst-plugin
 
-:plugin-version:0.2.0
-:gitbucket-bincompat-version:4.10
+plugin-version
+  0.2.0.99
+gitbucket-bincompat-version
+  4.10
 
 A `Git Bucket <https://github.com/gitbucket/gitbucket>`_ plug-in that
 provides ReSTructured text rendering capabilities. All ``.rst`` files
