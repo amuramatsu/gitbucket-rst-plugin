@@ -6,7 +6,7 @@ import gitbucket.core.plugin.PluginRegistry
 import gitbucket.core.service.SystemSettingsService.SystemSettings
 import io.github.gitbucket.solidbase.model.Version
 import javax.servlet.ServletContext
-import amuramatsu.gitbucket.rst.RstRenderer
+import com.github.amuramatsu.gitbucket.rst.RstRenderer
 
 class Plugin extends gitbucket.core.plugin.Plugin {
 
@@ -15,7 +15,11 @@ class Plugin extends gitbucket.core.plugin.Plugin {
   override val pluginId: String = "rst"
   override val pluginName: String = "ReSTructured text Plugin"
   override val description: String = "Provides ReSTructured text rendering for GitBucket."
-  override val versions: List[Version] = List(new Version("0.2.0"))
+  override val versions: List[Version] = List(
+    new Version("0.1.0"),
+    new Version("0.2.0"),
+    new Version("0.2.1")
+  )
 
   private[this] var renderer: Option[RstRenderer] = None
 

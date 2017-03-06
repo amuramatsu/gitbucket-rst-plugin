@@ -1,4 +1,4 @@
-package amuramatsu.gitbucket.rst
+package com.github.amuramatsu.gitbucket.rst
 
 import laika.api.Transform
 import laika.parse.rst.ReStructuredText

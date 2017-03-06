@@ -7,7 +7,7 @@ gitbucket-rst-plugin
     :target: https://travis-ci.org/amuramatsu/gitbucket-rst-plugin
 
 plugin-version
-  0.2.0
+  0.2.1
 gitbucket-bincompat-version
   4.10
 
@@ -65,6 +65,11 @@ text renderer.
 
 ChangeLog
 ---------
+
+gitbucket-rst-plugin 0.2.1 - 2017-03-06
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- can be migrated from old versions
 
 gitbucket-rst-plugin 0.2.0 - 2017-03-03
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
