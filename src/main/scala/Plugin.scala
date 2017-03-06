@@ -6,7 +6,7 @@ import gitbucket.core.plugin.PluginRegistry
 import gitbucket.core.service.SystemSettingsService.SystemSettings
 import io.github.gitbucket.solidbase.model.Version
 import javax.servlet.ServletContext
-import amuramatsu.gitbucket.rst.RstRenderer
+import com.github.amuramatsu.gitbucket.rst.RstRenderer
 
 class Plugin extends gitbucket.core.plugin.Plugin {
 
