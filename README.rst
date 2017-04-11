@@ -16,6 +16,17 @@ provides ReSTructured text rendering capabilities. All ``.rst`` files
 will be automatically rendered as ReSTructured text, supporting most
 features of the `LAIKA <http://planet42.github.io/Laika/>`_.
 
+Compatibility with Gitbucket
+----------------------------
+
++---------------------+-------------------+
+| This plugin version | Gitbucket version |
++=====================+===================+
+| 0.2.0, 0.2.1        | 4.10, 4.11        |
++---------------------+-------------------+
+| 0.1.0               | 4.5-4.9           |
++---------------------+-------------------+
+
 Download
 ---------
 
@@ -25,14 +36,14 @@ You can download a precompiled version from the
 Build from source
 -----------------
 
-.. code-block:: none
+.. code-block::
 
     sbt clean package
 
 The built package is located at
 ``target/scala-2.12/gitbucket-{gitbucket-bincompat-version}-rst-plugin-{plugin-version}.jar``.
 
-.. code-block:: none
+.. code-block::
 
     sbt assembly
 
