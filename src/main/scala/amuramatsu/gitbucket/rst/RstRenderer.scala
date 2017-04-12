@@ -4,16 +4,11 @@ import java.io.{PrintWriter, StringWriter}
 import laika.api.Transform
 import laika.parse.rst.{ReStructuredText, ExtendedHTML}
 import laika.render.HTML
-import org.htmlcleaner.HtmlCleaner
-import org.htmlcleaner.HtmlNode
-import org.htmlcleaner.SimpleHtmlSerializer
-import org.htmlcleaner.TagNode
-import org.htmlcleaner.TagNodeVisitor
+import org.htmlcleaner._
 import org.slf4j.LoggerFactory
 
 import gitbucket.core.controller.Context
-import gitbucket.core.plugin.RenderRequest
-import gitbucket.core.plugin.Renderer
+import gitbucket.core.plugin.{RenderRequest, Renderer}
 import gitbucket.core.service.RepositoryService.RepositoryInfo
 import gitbucket.core.view.helpers
 import gitbucket.core.util.StringUtil
