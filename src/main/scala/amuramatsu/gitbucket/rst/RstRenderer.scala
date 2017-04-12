@@ -1,5 +1,6 @@
 package com.github.amuramatsu.gitbucket.rst
 
+import java.io.{PrintWriter, StringWriter}
 import laika.api.Transform
 import laika.parse.rst.ReStructuredText
 import laika.render.HTML
@@ -15,11 +16,14 @@ import gitbucket.core.plugin.RenderRequest
 import gitbucket.core.plugin.Renderer
 import gitbucket.core.service.RepositoryService.RepositoryInfo
 import gitbucket.core.view.helpers
+import gitbucket.core.util.StringUtil
 import play.twirl.api.Html
 
 class RstRenderer extends Renderer {
 
   private[this] val log = LoggerFactory.getLogger(classOf[RstRenderer])
+  private val EXCEPTION_LINES = 5
+  private val EXCEPTION_RENDER_STYLE = "color:black;background-color:#ffcaca"
 
   def render(request: RenderRequest): Html = {
     import request._
@@ -38,7 +42,24 @@ class RstRenderer extends Renderer {
 
     log.info("About to render ReSTructured text")
 
-    val rendered = Transform from ReStructuredText to HTML fromString rst toString
+    val rendered = try {
+      Transform from ReStructuredText to HTML fromString rst toString
+    } catch {
+      case e: Exception => {
+        val sw = new StringWriter()
+        e.printStackTrace(new PrintWriter(sw))
+        val stackTrace = sw.toString.lines take EXCEPTION_LINES mkString "\n"
+        s"""|<h2 style="$EXCEPTION_RENDER_STYLE">Internal Error is occured</h2>
+            |<pre style="$EXCEPTION_RENDER_STYLE">
+            |${ StringUtil.escapeHtml(stackTrace) }
+            |  ...
+            |</pre>
+            |<hr>
+            |<pre>
+            |${ StringUtil.escapeHtml(rst) }
+            |</pre>""".stripMargin
+      }
+    }
 
     val path = filePath.reverse.tail.reverse match {
       case Nil => ""
