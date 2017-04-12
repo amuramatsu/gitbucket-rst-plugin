@@ -55,7 +55,7 @@ Installation
 ------------
 
 Download
-``gitbucket-{gitbucket-bincompat-version}-rst-plugin-assembly-{plugin-version}.jar``
+``gitbucket-rst-plugin-assembly-{plugin-version}.jar``
 or build the assembly package JAR file from source and copy it into
 ``GITBUCKET_HOME/plugins``. If you have older versions of this plugin in
 this directory, you must delete them. Then restart GitBucket. That's it.
