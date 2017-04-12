@@ -2,7 +2,7 @@ package com.github.amuramatsu.gitbucket.rst
 
 import java.io.{PrintWriter, StringWriter}
 import laika.api.Transform
-import laika.parse.rst.ReStructuredText
+import laika.parse.rst.{ReStructuredText, ExtendedHTML}
 import laika.render.HTML
 import org.htmlcleaner.HtmlCleaner
 import org.htmlcleaner.HtmlNode
@@ -43,7 +43,7 @@ class RstRenderer extends Renderer {
     log.info("About to render ReSTructured text")
 
     val rendered = try {
-      Transform from ReStructuredText to HTML fromString rst toString
+      Transform from ReStructuredText to HTML rendering ExtendedHTML fromString rst toString
     } catch {
       case e: Exception => {
         val sw = new StringWriter()
