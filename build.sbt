@@ -1,6 +1,6 @@
 val Organization = "com.github.amuramatsu"
 // Don't forget to also update src/main/scala/Plugin.scala
-val Version = "0.2.1"
+val Version = "0.3.0"
 val Name = "gitbucket-rst-plugin"
 
 val GitBucketVersion = "4.10"

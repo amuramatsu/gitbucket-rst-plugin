@@ -7,7 +7,7 @@ gitbucket-rst-plugin
     :target: https://travis-ci.org/amuramatsu/gitbucket-rst-plugin
 
 plugin-version
-  0.2.1
+  0.3.0
 gitbucket-compat-version
   4.10, 4.11
 
@@ -22,7 +22,7 @@ Compatibility with Gitbucket
 +---------------------+-------------------+
 | This plugin version | Gitbucket version |
 +=====================+===================+
-| 0.2.0, 0.2.1        | 4.10, 4.11        |
+| 0.3.0, 0.2.1, 0.2.0 | 4.10, 4.11        |
 +---------------------+-------------------+
 | 0.1.0               | 4.5-4.9           |
 +---------------------+-------------------+
@@ -76,6 +76,12 @@ text renderer.
 
 ChangeLog
 ---------
+
+gitbucket-rst-plugin 0.3.0 - 2017-04-13
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- When rendering library throws exception, this plugin catch them
+  and render raw ReST file, instead of crashing gitbucket server.
 
 gitbucket-rst-plugin 0.2.1 - 2017-03-06
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
