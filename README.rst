@@ -80,6 +80,8 @@ ChangeLog
 gitbucket-rst-plugin 0.3.0 - 2017-04-13
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- Update LAIKA and use ExtendedHTML renderer for option list rendering
+
 - When rendering library throws exception, this plugin catch them
   and render raw ReST file, instead of crashing gitbucket server.
 
