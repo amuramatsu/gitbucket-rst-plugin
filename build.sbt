@@ -23,10 +23,7 @@ lazy val root = (project in file(".")).
       "io.github.gitbucket" %% "gitbucket" % GitBucketFullVersion  % "provided",
       "com.typesafe.play"   %% "twirl-compiler"     % "1.3.0"      % "provided",
       "javax.servlet"        % "javax.servlet-api"  % "3.1.0"      % "provided",
-      //"org.planet42"      %% "laika-core"         % "0.7.0",          // not released yet
-      "com.typesafe"         % "config"             % "1.0.2",          // for laika-0.7.0
-      "net.sf.jtidy"         % "jtidy"              % "r938",           // for laika-0.7.0
-      "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4", // for laika-0.7.0
+      "org.planet42"        %% "laika-core"         % "0.7.0",
       "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.16"
     ),
     
