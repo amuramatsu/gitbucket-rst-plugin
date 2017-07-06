@@ -7,7 +7,7 @@ gitbucket-rst-plugin
     :target: https://travis-ci.org/amuramatsu/gitbucket-rst-plugin
 
 :plugin-version: 0.4.0
-:gitbucket-compat-version: 4.10, 4.11, 4.12
+:gitbucket-compat-version: 4.10-4.14
 
 A `Git Bucket <https://github.com/gitbucket/gitbucket>`_ plug-in that
 provides ReSTructured text rendering capabilities. All ``.rst`` files
@@ -20,7 +20,7 @@ Compatibility with Gitbucket
 +----------------------------+-------------------+
 | This plugin version        | Gitbucket version |
 +============================+===================+
-| 0.4.0, 0.3.0, 0.2.1, 0.2.0 | 4.10, 4.11, 4.12  |
+| 0.4.0, 0.3.0, 0.2.1, 0.2.0 | 4.10-4.14         |
 +----------------------------+-------------------+
 | 0.1.0                      | 4.5-4.9           |
 +----------------------------+-------------------+
