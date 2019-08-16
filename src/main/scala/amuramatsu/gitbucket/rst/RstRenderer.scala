@@ -2,8 +2,7 @@ package com.github.amuramatsu.gitbucket.rst
 
 import java.io.{PrintWriter, StringWriter}
 import laika.api.Transform
-import laika.parse.rst.{ReStructuredText, ExtendedHTML}
-import laika.render.HTML
+import laika.format.{HTML, ReStructuredText}
 import org.htmlcleaner._
 import org.slf4j.LoggerFactory
 
@@ -38,12 +37,12 @@ class RstRenderer extends Renderer {
     log.info("About to render ReSTructured text")
 
     val rendered = try {
-      Transform from ReStructuredText to HTML rendering ExtendedHTML fromString rst toString
+      Transform from ReStructuredText to HTML fromString rst toString
     } catch {
       case e: Exception => {
         val sw = new StringWriter()
         e.printStackTrace(new PrintWriter(sw))
-        val stackTrace = sw.toString.lines take EXCEPTION_LINES mkString "\n"
+        val stackTrace = sw.toString.linesIterator take EXCEPTION_LINES mkString "\n"
         s"""|<h2 style="$EXCEPTION_RENDER_STYLE">Internal Error is occured</h2>
             |<pre style="$EXCEPTION_RENDER_STYLE">
             |${ StringUtil.escapeHtml(stackTrace) }

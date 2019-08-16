@@ -3,10 +3,9 @@ val Organization = "com.github.amuramatsu"
 val Version = "0.4.0"
 val Name = "gitbucket-rst-plugin"
 
-val GitBucketVersion = "4.10"
-val GitBucketFullVersion = s"${GitBucketVersion}.0"
+gitbucketVersion := "4.32.0"
 
-val ScalaVersion = "2.12.1"
+val ScalaVersion = "2.13.0"
 
 resolvers ++= Seq(
   Resolver.jcenterRepo
@@ -20,10 +19,7 @@ lazy val root = (project in file(".")).
     scalaVersion := ScalaVersion,
     scalacOptions := Seq("-deprecation", "-language:postfixOps"),
     libraryDependencies ++= Seq(
-      "io.github.gitbucket" %% "gitbucket" % GitBucketFullVersion  % "provided",
-      "com.typesafe.play"   %% "twirl-compiler"     % "1.3.0"      % "provided",
-      "javax.servlet"        % "javax.servlet-api"  % "3.1.0"      % "provided",
-      "org.planet42"        %% "laika-core"         % "0.7.0",
+      "org.planet42"        %% "laika-core"         % "0.11.0",
       "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.16"
     ),
     
